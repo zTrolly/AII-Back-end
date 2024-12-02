@@ -12,6 +12,11 @@ export const Home = () => {
     const [error, setError] = useState<string | null>(null);
     const navigate = useNavigate();
 
+    /**
+     * Função para buscar um Pokémon pelo nome
+     * @returns  {Promise<void>} Retorna um erro caso o Pokémon não seja encontrado
+     *  
+     */
     const handleSearch = async () => {
         setError(null);
         if (!pokemonName.trim()) {
@@ -54,6 +59,7 @@ export const Home = () => {
         handleGeneration(generation);
     }, [generation]);
 
+    
     const renderGeneration = () => {
         const title = ['Primeira', 'Segunda', 'Terceira', 'Quarta', 'Quinta', 'Sexta', 'Sétima', 'Oitava'];
 

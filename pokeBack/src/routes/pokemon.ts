@@ -2,6 +2,11 @@ import { Router, Request, Response } from 'express';
 
 export const pokemonRoute = Router();
 
+/**
+ * Rota para buscar um Pokémon pelo nome
+ * @param {string} name Nome do Pokémon a ser buscado
+ * @returns  {Promise<any>} Retorna os dados do Pokémon buscado
+ */
 pokemonRoute.get('/getPokemonByName/:name', async (req: Request, res: Response) => {
     try {
         const {name} = req.params;
@@ -18,6 +23,10 @@ pokemonRoute.get('/getPokemonByName/:name', async (req: Request, res: Response) 
     }
 });
 
+/**
+ * Rota para buscar um Pokémon pelo ID
+ * @param {number} id ID do Pokémon a ser buscado
+ */
 pokemonRoute.get('/getPokemonById/:id', async (req: Request, res: Response) => {
     try {
         const {id} = req.params;
@@ -34,6 +43,10 @@ pokemonRoute.get('/getPokemonById/:id', async (req: Request, res: Response) => {
     }
 });
 
+/**
+ * Rota para buscar uma geração de Pokémon
+ * @param {number} generation Número da geração a ser buscada
+ */
 pokemonRoute.get('/getGeneration/:generation', async (req: Request, res: Response) => {
     try {
         const {generation} = req.params;
@@ -50,6 +63,10 @@ pokemonRoute.get('/getGeneration/:generation', async (req: Request, res: Respons
     }
 });
 
+/**
+ * Rota para buscar a espécie de um Pokémon
+ * @param {string} name Nome do Pokémon a ser buscado
+ */
 pokemonRoute.get('/getPokemonSpecies/:name', async (req: Request, res: Response) => {
     try {
         const {name} = req.params;
@@ -66,6 +83,10 @@ pokemonRoute.get('/getPokemonSpecies/:name', async (req: Request, res: Response)
     }
 });
 
+/**
+ * Rota para buscar a evolução de um Pokémon
+ * @param {number} id ID do Pokémon a ser buscado
+ */
 pokemonRoute.get('/getPokemonEvolution/:id', async (req: Request, res: Response) => {
     try {
         const {id} = req.params;
@@ -82,6 +103,12 @@ pokemonRoute.get('/getPokemonEvolution/:id', async (req: Request, res: Response)
     }
 });
 
+
+/**
+ * Rota para buscar um tipo de Pokémon
+ * @param {string} type Tipo do Pokémon a ser buscado
+ * @returns  {Promise<any>} Retorna os dados do tipo de Pokémon buscado
+ */
 pokemonRoute.get('/getPokemonType/:type', async (req: Request, res: Response) => {
     try {
         const {type} = req.params;
@@ -97,6 +124,12 @@ pokemonRoute.get('/getPokemonType/:type', async (req: Request, res: Response) =>
     }
 });
 
+
+/**
+ * Rota para buscar uma habilidade de Pokémon
+ * @param {string} ability Habilidade do Pokémon a ser buscada
+ * @returns  {Promise<any>} Retorna os dados da habilidade de Pokémon buscada
+ */
 pokemonRoute.get('/getPokemonAbility/:ability', async (req: Request, res: Response) => {
     try {
         const {ability} = req.params;
@@ -112,6 +145,12 @@ pokemonRoute.get('/getPokemonAbility/:ability', async (req: Request, res: Respon
     }
 });
 
+
+/**
+ * Rota para buscar um habitat de Pokémon
+ * @param {string} habitat Habitat do Pokémon a ser buscado
+ * @returns  {Promise<any>} Retorna os dados do habitat de Pokémon buscado
+ */
 pokemonRoute.get('/getPokemonHabitat/:habitat', async (req: Request, res: Response) => {
     try {
         const {habitat} = req.params;
@@ -123,6 +162,12 @@ pokemonRoute.get('/getPokemonHabitat/:habitat', async (req: Request, res: Respon
     }
 });
 
+
+/**
+ * Rota para buscar uma forma de Pokémon
+ * @param {string} shape Forma do Pokémon a ser buscada
+ * @returns  {Promise<any>} Retorna os dados da forma de Pokémon buscada
+ */
 pokemonRoute.get('/getPokemonShape/:shape', async (req: Request, res: Response) => {
     try {
         const {shape} = req.params;
